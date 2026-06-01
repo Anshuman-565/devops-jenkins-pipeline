@@ -4,14 +4,23 @@
 Create a simple Jenkins CI/CD pipeline for a Python application.
 
 ## Architecture Diagram
-![Architecture Diagram](assets/architecture-diagram.png)
+This section summarizes the pipeline architecture and the main components involved.
 
-This architecture diagram shows the end-to-end flow of the Jenkins pipeline, the source repository, the build/test/deploy stages, and the simple Python app that is being deployed.
+| Component | Description |
+|---|---|
+| Source Repository | GitHub repository containing `app.py`, `Dockerfile`, `Jenkinsfile`, and `requirements.txt`. |
+| Jenkins Server | Executes the pipeline and coordinates build, test, and deploy stages. |
+| Docker | Builds the application image and packages the app for deployment. |
+| Python Application | Minimal app that prints a message and is the deployment target of the pipeline. |
 
 ## Control Flow Diagram
-![Control Flow Diagram](assets/controlflow-diagram.png)
+This section summarizes the control flow of the Jenkins pipeline defined in `Jenkinsfile`.
 
-This control flow diagram visualizes how the Jenkinsfile executes the pipeline stages in order: Build, Test, and Deploy. It maps directly to the sequential stage structure in `Jenkinsfile`.
+| Stage | Description |
+|---|---|
+| Build | Runs the build step and prepares the application. |
+| Test | Executes tests or verification steps. |
+| Deploy | Deploys the application after successful build and test stages. |
 
 ## Tools Used
 - Jenkins
